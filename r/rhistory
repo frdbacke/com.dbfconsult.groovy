@@ -1,0 +1,19 @@
+inflation_belgium <- read.table("/home/frdbacke/java/eclipse-workspace/com.dbfconsult.groovy/data/belgium-inflation.csv", header=FALSE, sep=",")
+inflation_belgium
+summary(inflation_belgium[2])
+
+years = inflation_belgium[1]
+
+inflation = inflation_belgium[2]
+
+plot(inflation_belgium, type="l")
+
+boxplot(inflation_belgium[2], main='Inflation Belgium')
+
+inflation_belgium_20 = inflation_belgium[1:20,]
+
+inflation_belgium_last_20 = subset(inflation_belgium, inflation_belgium[1]>= 2012-20)
+
+history(100)
+getwd()
+savehistory('rhistory')
