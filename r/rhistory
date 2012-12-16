@@ -14,6 +14,8 @@ inflation_belgium_20 = inflation_belgium[1:20,]
 
 inflation_belgium_last_20 = subset(inflation_belgium, inflation_belgium[1]>= 2012-20)
 
+inflation_belgium_last_20 = subset(inflation_belgium, inflation_belgium[1]>= 2012-20 & inflation_belgium[2] <=4.0)
+
 history(100)
 getwd()
 savehistory('rhistory')
